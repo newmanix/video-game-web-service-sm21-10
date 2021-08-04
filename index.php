@@ -28,11 +28,6 @@ function loadAJAX(cat)
 		url: "api.php?cat=" + cat,
 		success: bondJSON
 	});
-
-
-
-
-
 }
     
 function toConsole(data)
@@ -41,7 +36,13 @@ function toConsole(data)
 }
 
 function bondJSON(data){
+	//Here is how I see data returned via the Console
 	console.log(data);
+
+	$("#output").text(JSON.stringify(data));
+
+
+
 }
 
 </script>
