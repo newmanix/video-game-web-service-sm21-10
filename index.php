@@ -57,6 +57,10 @@ function bondJSON(data){
 	//identifies the type of data returned
 	$('#filmtitle').html(data.title);
 
+	//clears other clicked films
+	$('#films').html('');
+
+	//loop through films and add template
 	$.each(data.films,function(i,item){
 		let myFilm = bondTemplate(item);
 		$('<div></div>').html(myFilm).appendTo('#films');
